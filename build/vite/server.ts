@@ -1,5 +1,5 @@
 import type { PreviewOptions, ServerOptions } from 'vite';
-import { cloneDeep } from '../../libs/utils/src/es';
+import { cloneDeep } from '../../packages/utils/src/es';
 
 export interface GetServerConfigOptions {
   devPort?: number

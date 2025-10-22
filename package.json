@@ -16,7 +16,7 @@
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix ./",
     "lint:style": "stylelint --fix ./**/*.{css,scss,vue,html}",
     "lint:others": "prettier --write ./**/*.{html,json,md}",
-    "lint:commit": "commitlint -e $HUSKY_GIT_PARAMS",
+    "lint:commit": "commitlint -e $HUSKY_GIT_PARAMS"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.1.0",

@@ -13,6 +13,7 @@
     "test:cov": "vitest run --coverage"
   },
   "dependencies": {
+    "@chatbot/db": "workspace:^",
     "@langchain/core": "^0.3.62",
     "@langchain/openai": "^0.5.18",
     "@mozilla/readability": "^0.6.0",
@@ -22,7 +23,6 @@
     "@nestjs/mapped-types": "catalog:nestjs",
     "@nestjs/platform-express": "catalog:nestjs",
     "@nestjs/swagger": "catalog:nestjs",
-    "@chatbot/db": "workspace:^",
     "@prisma/client": "catalog:nestjs",
     "@types/js-md5": "catalog:",
     "axios": "catalog:",

@@ -1,0 +1,9 @@
+@forward "./theme";
+@forward "element-plus/theme-chalk/src/mixins/function";
+
+@mixin ellipsis-mixin($line-number:1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $line-number;
+  -webkit-box-orient: vertical;
+}

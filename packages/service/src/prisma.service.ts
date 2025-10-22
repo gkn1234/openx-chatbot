@@ -1,5 +1,5 @@
+import { PrismaClient } from '@chatbot/db';
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { PrismaClient } from '@openx/db-ai';
 
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {

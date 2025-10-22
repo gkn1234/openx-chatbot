@@ -1,0 +1,96 @@
+@forward "element-plus/theme-chalk/src/mixins/config.scss" with (
+  $namespace: "el"
+);
+@use "element-plus/theme-chalk/src/mixins/function.scss" as *;
+@forward "element-plus/theme-chalk/src/common/var" with (
+  $colors: (
+    "primary": (
+      "base": #c7000b,
+    ),
+    "success": (
+      "base": #50d4ab,
+    ),
+    "warning": (
+      "base": #fbb175,
+    ),
+    "danger": (
+      "base": #f66f6a,
+    ),
+    "error": (
+      "base": #f66f6a,
+    ),
+    "info": (
+      "base": #526ecc,
+    )
+  ),
+  $text-color: (
+    "primary": #252b3a,
+    "regular": #575d6c,
+    "secondary": #8a8e99,
+    "placeholder": #adb0b8,
+    "active": #5e7ce0,
+  ),
+  $bg-color: (
+    "base": #fff,
+    "page": #F2F3F5,
+  ),
+  $border-color-hover: #96adfa,
+  $box-shadow: (
+    "": 0 3px 6px 0 rgb(0 0 0 / 16%),
+    "reverse": 0 -3px 6px 0 rgb(0 0 0 / 16%),
+    "dark": (
+      0 2px 4px rgb(0 0 0 / 12%),
+      0 0 6px rgb(0 0 0 / 12%),
+    ),
+    "light": 0 2px 12px 0 rgb(0 0 0 / 10%),
+  ),
+  $input: (
+    "border-color": var(--el-border-color-light),
+    "focus-border-color": var(--el-border-color-hover),
+  ),
+  $select: (
+    "input-focus-border-color": var(--el-border-color-hover),
+    "border-radius": 12px,
+  ),
+  $dropdown: (
+    "menuItem-hover-fill": var(--el-bg-color-page),
+  ),
+  $menu: (
+    "hover-bg-color": transparent,
+    "item-font-size": getCssVar("font-size", "medium"),
+    "base-level-padding": 16px,
+    "border-color": var(--el-border-color-light),
+  ),
+  $pagination: (
+    "font-size": var(--el-font-size-extra-small),
+    "border-radius": 4px
+  ),
+  $tabs: (
+    "header-height": 48px,
+  ),
+  $timeline: (
+    "node-size-normal": 7px,
+    "node-size-large": 12px,
+  ),
+  $dialog: (
+    "border-radius": 16px,
+  ),
+  $table: (
+    "header-text-color": var(--el-text-color-primary),
+    "header-bg-color": var(--el-bg-color-page),
+  ),
+  $radio: (
+    "input-border-color-hover": var(--el-color-info),
+  ),
+  $radio-checked: (
+    "input-border-color": var(--el-color-info),
+    "icon-color": var(--el-color-info),
+    "text-color": var(--el-text-color-regular),
+  ),
+  $checkbox: (
+    "input-border-color-hover": var(--el-color-info),
+    "checked-text-color": var(--el-text-color-regular),
+    "checked-input-border-color": var(--el-color-info),
+    "checked-bg-color": var(--el-color-info),
+  ),
+);

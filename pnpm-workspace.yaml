@@ -33,6 +33,7 @@ catalog:
   vue-ueditor-wrap: ^3.0.8
   xss: ^1.0.10
   zx: ^8.6.2
+
 catalogs:
   nestjs:
     '@nestjs/cli': ^11.0.7
@@ -62,3 +63,16 @@ catalogs:
     unplugin-swc: ^1.5.5
     winston: ^3.17.0
     winston-daily-rotate-file: ^5.0.0
+
+ignoredBuiltDependencies:
+  - '@nestjs/core'
+  - '@parcel/watcher'
+  - '@scarf/scarf'
+  - '@swc/core'
+  - esbuild
+  - vue-demi
+
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - prisma
