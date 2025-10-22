@@ -1,0 +1,50 @@
+@forward "element-plus/theme-chalk/src/mixins/config.scss" with (
+  $namespace: "opct"
+);
+@use "element-plus/theme-chalk/src/mixins/function.scss" as *;
+@forward "element-plus/theme-chalk/src/common/var" with (
+  $colors: (
+    "primary": (
+      "base": #c7000b,
+    ),
+    "success": (
+      "base": #50d4ab,
+    ),
+    "warning": (
+      "base": #fbb175,
+    ),
+    "danger": (
+      "base": #f66f6a,
+    ),
+    "error": (
+      "base": #f66f6a,
+    ),
+    "info": (
+      "base": #526ecc,
+    )
+  ),
+  $text-color: (
+    "primary": #252b3a,
+    "regular": #575d6c,
+    "secondary": #8a8e99,
+    "placeholder": #adb0b8,
+    "active": #5e7ce0,
+  ),
+  $bg-color: (
+    "page": #F2F3F5,
+  ),
+  $border-color: (
+    "": #adb0b8,
+    "light": #dfe1e6,
+  ),
+  $border-color-hover: #96adfa,
+  $box-shadow: (
+    "": 0 3px 6px 0 rgb(0 0 0 / 16%),
+    "reverse": 0 -3px 6px 0 rgb(0 0 0 / 16%),
+    "dark": (
+      0 2px 4px rgb(0 0 0 / 12%),
+      0 0 6px rgb(0 0 0 / 12%),
+    ),
+    "light": 0 2px 12px 0 rgb(0 0 0 / 10%),
+  ),
+);

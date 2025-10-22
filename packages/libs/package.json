@@ -1,7 +1,7 @@
 {
-  "name": "@openx/chatbot",
+  "name": "@chatbot/libs",
   "type": "module",
-  "version": "0.0.16",
+  "version": "0.0.0",
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
@@ -41,8 +41,8 @@
     }
   },
   "dependencies": {
-    "@openx/chatbot-app": "workspace:^",
-    "@openx/utils": "workspace:^",
+    "@chatbot/app": "workspace:^",
+    "@chatbot/utils": "workspace:^",
     "@types/lodash-es": "catalog:",
     "lodash-es": "catalog:"
   },

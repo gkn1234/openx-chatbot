@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>内源问答助手</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="../dist/index.full.js"></script>
+    <script>
+      const { mount } = window.Chatbot
+      const { instance, opt } = mount({
+        userInfo: {
+          name: 'g30021214',
+          nickName: '郭凯南',
+          avatar: '',
+        },
+        chatUrl: 'https://chatbot.openx.huawei.com',
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@openx/utils": ["libs/utils/src/index"],
+      "@openx/utils/*": ["libs/utils/src/*"],
+      "@openx/track": ["libs/track/src/index"],
+      "@openx/fetch": ["libs/fetch/src/index"],
+      "@openx/fetch/*": ["libs/fetch/src/*"],
+      "@openx/fetch/plugin-*": ["libs/fetch/src/plugins/*"],
+      "@openx/api-openx": ["api/api-openx/src/index"],
+      "@openx/api-openx/*": ["api/api-openx/src/*"],
+      "@openx/api-dify": ["api/api-dify/src/index"],
+      "@openx/api-codehub": ["api/api-codehub/src/index"],
+      "@openx/chatbot-app": ["apps/chatbot/src/index"],
+      "@openx/chatbot-app/*": ["apps/chatbot/src/*"],
+      "@openx/chatbot": ["libs/chatbot/src/index"],
+      "@openx/chatbot/*": ["libs/chatbot/src/*"],
+      "@openx/db-ai": ["services/db-ai/src/index"]
+    },
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "allowJs": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "noEmit": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "@chatbot/utils",
+  "type": "module",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/src/browser/index.d.ts",
+      "import": "./dist/browser.js"
+    },
+    "./vue": {
+      "types": "./dist/src/vue/index.d.ts",
+      "import": "./dist/vue.js"
+    },
+    "./vue-router": {
+      "types": "./dist/src/vue-router/index.d.ts",
+      "import": "./dist/vue-router.js"
+    },
+    "./vue-composables": {
+      "types": "./dist/src/vue-composables/index.d.ts",
+      "import": "./dist/vue-composables.js"
+    },
+    "./vue-directives": {
+      "types": "./dist/src/vue-directives/index.d.ts",
+      "import": "./dist/vue-directives.js"
+    }
+  },
+  "module": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:dev": "cross-env BUILD_CHECK=true vite build",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage.enabled",
+    "test:preview": "vite preview --outDir vitest-output/html"
+  },
+  "publishConfig": {
+    "registry": "https://cmc.centralrepo.rnd.huawei.com/artifactory/api/npm/product_npm/",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "sortablejs": ">=1.15.0",
+    "vue": ">=3.5.0",
+    "vue-router": ">=4.2.0"
+  },
+  "peerDependenciesMeta": {
+    "sortablejs": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vue-router": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@types/lodash-es": "catalog:",
+    "@types/sortablejs": "catalog:",
+    "async-validator": "^4.2.5",
+    "lodash-es": "catalog:",
+    "type-fest": "^4.41.0"
+  },
+  "devDependencies": {
+    "sortablejs": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

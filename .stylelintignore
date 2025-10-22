@@ -1,0 +1,9 @@
+node_modules
+
+# output production
+dist
+dist-test
+
+# Vite & Vitest
+vitest-output
+.vite-inspect

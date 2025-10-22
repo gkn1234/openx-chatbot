@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {},
+  "include": [
+    ".stylelintrc.js",
+    ".commitlintrc.js",
+    ".lintstagedrc.js",
+    "*.config.*",
+    "vitest.workspace.ts",
+    "build",
+    "scripts"
+  ]
+}

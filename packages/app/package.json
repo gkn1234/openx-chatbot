@@ -1,7 +1,7 @@
 {
-  "name": "@openx/chatbot-app",
+  "name": "@chatbot/app",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
@@ -48,10 +48,7 @@
     }
   },
   "devDependencies": {
-    "@openx/api-openx": "workspace:^",
-    "@openx/fetch": "workspace:^",
-    "@openx/track": "workspace:^",
-    "@openx/utils": "workspace:^",
+    "@chatbot/utils": "workspace:^",
     "@shikijs/langs": "^3.4.2",
     "@shikijs/rehype": "^3.4.2",
     "@shikijs/themes": "^3.4.2",
