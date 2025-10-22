@@ -1,0 +1,76 @@
+{
+  // Enable the ESlint flat config support
+  "eslint.useFlatConfig": true,
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  // Stylelint
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "postcss",
+    "vue"
+  ],
+  "unocss.autocomplete.matchType": "fuzzy",
+  // 行尾默认为 LF 换行符而非 CRLF
+  "files.eol": "\n",
+  // 键入 Tab 时插入空格而非 \t
+  "editor.insertSpaces": true,
+  // 缩进大小：2
+  "editor.tabSize": 2,
+  // 自动补充闭合的 HTML 标签
+  "html.autoClosingTags": true,
+  "files.exclude": {
+    "**/.git": false
+  },
+  "cssPeek.peekToExclude": [
+    "**/node_modules",
+    "**/bower_components",
+    "**/*.code-search",
+    "**/dist",
+    "**/dist-test",
+    "**/vitest-output",
+    "**/.vitepress/cache"
+  ],
+  "scss.scannerExclude": [
+    "**/node_modules",
+    "**/bower_components",
+    "**/*.code-search",
+    "**/dist",
+    "**/dist-test",
+    "**/vitest-output",
+    "**/.vitepress/cache"
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/dist": true,
+    "**/dist-test": true,
+    "**/vitest-output": true,
+    "**/.vitepress/cache": true
+  }
+}
