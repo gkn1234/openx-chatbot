@@ -1,0 +1,49 @@
+enum ChatRole {
+  user
+  assistant
+  system
+}
+
+enum ChatMessageState {
+  /// 对话成功
+  success
+  /// 对话生成中
+  running
+  /// 对话生成错误
+  failed
+  /// 对话生成中止
+  stopped
+}
+
+model t_chatbot_message {
+  id String @id @default(uuid())
+
+  /// 用户输入参数
+  inputs Json
+
+  /// 用户输入 / 提问内容
+  query String @db.LongText
+
+  /// 回答过程中的迭代内容
+  processContent String @db.LongText
+
+  /// 回答消息内容(不包含工具迭代内容)
+  answer String @db.LongText
+
+  /// 生成该消息的 Agent
+  agent t_chatbot_agent @relation(fields: [agentId], references: [id])
+  agentId Int
+
+  /// 该消息所属的对话
+  conversation t_chatbot_conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+
+  /// 当前消息状态
+  status ChatMessageState
+
+  memories t_chatbot_memory[]
+  feedbacks t_chatbot_feedback[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}

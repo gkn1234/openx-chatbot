@@ -1,0 +1,26 @@
+enum ChatFeedbackRating {
+  like
+  dislike
+}
+
+model t_chatbot_feedback {
+  id Int @id @default(autoincrement())
+
+  /// 消息反馈的用户
+  userId String @db.VarChar(255) @default("")
+
+  /// 点赞情况
+  rating ChatFeedbackRating?
+
+  /// 消息反馈的具体信息
+  content String @db.VarChar(1023) @default("")
+
+  /// 是对哪条对话的反馈
+  message t_chatbot_message @relation(fields: [messageId], references: [id])
+  messageId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@unique([messageId, userId])
+}

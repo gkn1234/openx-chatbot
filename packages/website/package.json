@@ -1,0 +1,92 @@
+{
+  "name": "@openx/chatbot-app",
+  "type": "module",
+  "version": "0.0.2",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/src/client.d.ts",
+      "import": "./dist/client.js"
+    },
+    "./proxy-client": {
+      "types": "./dist/src/proxy-client.d.ts",
+      "import": "./dist/proxy-client.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "module": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://cmc.centralrepo.rnd.huawei.com/artifactory/api/npm/product_npm/",
+    "access": "public"
+  },
+  "scripts": {
+    "tsc": "vue-tsc --noEmit --skipLibCheck -p tsconfig.json",
+    "dev": "vite",
+    "build:dev": "vite build --mode development",
+    "build:test": "vite build --mode test",
+    "build:production": "vite build --mode production",
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "vue": ">=3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@openx/api-openx": "workspace:^",
+    "@openx/fetch": "workspace:^",
+    "@openx/track": "workspace:^",
+    "@openx/utils": "workspace:^",
+    "@shikijs/langs": "^3.4.2",
+    "@shikijs/rehype": "^3.4.2",
+    "@shikijs/themes": "^3.4.2",
+    "@types/hast": "^3.0.4",
+    "@types/lodash-es": "catalog:",
+    "@types/mdast": "^4.0.4",
+    "@types/unist": "^3.0.3",
+    "@vueuse/core": "catalog:",
+    "axios": "catalog:",
+    "element-plus": "catalog:",
+    "fast-xml-parser": "catalog:",
+    "github-slugger": "^2.0.0",
+    "hast": "^1.0.0",
+    "hast-util-to-html": "^9.0.5",
+    "hast-util-to-string": "^3.0.1",
+    "hastscript": "^9.0.1",
+    "katex": "^0.16.22",
+    "lodash-es": "catalog:",
+    "mdast": "^3.0.0",
+    "nanoid": "catalog:",
+    "rehype-katex": "^7.0.1",
+    "rehype-mermaid": "^3.0.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.1",
+    "rehype-vue": "^1.0.5",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "shiki": "^3.4.2",
+    "unified": "^11.0.5",
+    "unist": "^0.0.1",
+    "unist-util-visit": "^5.0.0",
+    "vue": "catalog:",
+    "vue-clipboard3": "catalog:",
+    "vue-router": "catalog:"
+  }
+}

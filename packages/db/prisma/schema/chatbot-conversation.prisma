@@ -1,0 +1,37 @@
+enum ChatConversationState {
+  /// 正常
+  normal
+  /// 已删除
+  disabled
+  /// 忙碌中
+  buzy
+}
+
+enum ChatConversationType {
+  /// 主流程
+  main
+  /// 子流程
+  sub
+}
+
+model t_chatbot_conversation {
+  id String @id @default(uuid())
+
+  /// 会话标题
+  title String @db.VarChar(255) @default("")
+
+  /// 会话用户
+  userId String @db.VarChar(255) @default("")
+
+  /// 会话状态
+  status ChatConversationState @default(normal)
+
+  /// 会话类型
+  type ChatConversationType @default(main)
+
+  messages t_chatbot_message[]
+  memories t_chatbot_memory[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}

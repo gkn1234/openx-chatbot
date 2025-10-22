@@ -1,0 +1,21 @@
+model t_chatbot_agent {
+  id Int @id @default(autoincrement())
+
+  name String @db.VarChar(255) @default("") @unique
+  desc String @db.VarChar(255) @default("")
+
+  /// 主对话模型
+  model t_chatbot_model @relation(fields: [modelId], references: [id])
+  modelId Int
+
+  /// 工具列表，工具名称之间用逗号分隔
+  tools String @db.Text
+
+  /// 最大迭代次数
+  maxRound Int @default(5)
+
+  messages t_chatbot_message[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}

@@ -1,0 +1,32 @@
+enum MemoryType {
+  toolcall
+}
+
+model t_chatbot_memory {
+  id String @id @default(uuid())
+
+  /// 记忆内容
+  content String @db.LongText
+
+  /// 记忆的关键参数，用以检验记忆是否重复，MD5 值
+  sign String @db.VarChar(255)
+
+  /// 记忆类型
+  type MemoryType
+
+  /// 该记忆在哪轮会话中生成
+  conversation t_chatbot_conversation @relation(fields: [conversationId], references: [id])
+  conversationId String
+
+  /// 该记忆在哪轮对话中生成
+  message t_chatbot_message @relation(fields: [messageId], references: [id])
+  messageId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  
+  /// 记忆失效时间
+  expiresAt DateTime
+
+  @@unique([sign, type, conversationId, messageId])
+}

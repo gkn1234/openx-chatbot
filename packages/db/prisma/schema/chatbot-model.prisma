@@ -1,0 +1,25 @@
+model t_chatbot_model {
+  id Int @id @default(autoincrement())
+
+  provider String @db.VarChar(255) @default("")
+  name String @db.VarChar(255) @default("")
+  desc String @db.VarChar(255) @default("")
+  baseUrl String @db.VarChar(255) @default("")
+  apiKey String @db.VarChar(1023) @default("")
+
+  /// 是否可以在前端进行模型选择
+  selectable Boolean @default(true)
+
+  /// 上下文 token 上限
+  maxTokens Int @default(0)
+
+  /// 模型输出 token 窗口
+  outputTokens Int @default(0)
+
+  /// token 编码方式
+  tokenEncoding String @db.VarChar(255) @default("")
+
+  agents t_chatbot_agent[]
+
+  @@unique([provider, name])
+}

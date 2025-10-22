@@ -1,0 +1,54 @@
+{
+  "name": "@openx/chatbot",
+  "type": "module",
+  "version": "0.0.16",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.es.js"
+    },
+    "./proxy-client": {
+      "types": "./dist/src/proxy-client.d.ts",
+      "import": "./dist/proxy-client.es.js"
+    },
+    "./dist/*": "./dist/*"
+  },
+  "module": "dist/index.es.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "scripts": {
+    "tsc": "vue-tsc --noEmit --skipLibCheck -p tsconfig.json",
+    "dev": "vite --config vite.play.config.ts",
+    "build:lib": "vite build && vite build --mode proxy-all && vite build --mode all"
+  },
+  "publishConfig": {
+    "registry": "https://cmc.centralrepo.rnd.huawei.com/artifactory/api/npm/product_npm/",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "element-plus": ">=2.6.0",
+    "vue": ">=3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "element-plus": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@openx/chatbot-app": "workspace:^",
+    "@openx/utils": "workspace:^",
+    "@types/lodash-es": "catalog:",
+    "lodash-es": "catalog:"
+  },
+  "devDependencies": {
+    "element-plus": "catalog:",
+    "nanoid": "catalog:",
+    "vue": "catalog:"
+  }
+}

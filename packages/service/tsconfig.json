@@ -1,0 +1,32 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2021",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "types": ["node", "vitest/globals"],
+    "strictBindCallApply": false,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": false,
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "*.config.ts",
+    "../db-ai/src",
+    "../../libs/utils/src",
+    "../../libs/fetch/src",
+    "../../api/api-dify/src"
+  ]
+}

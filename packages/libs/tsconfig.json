@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+  },
+  "include": [
+    "src",
+    "play",
+    "*.config.ts",
+    "../../build",
+    "../../apps/chatbot/src",
+    "../../libs/utils/src"
+  ]
+}
