@@ -1,5 +1,5 @@
-import type { Fetch } from '@app/api';
-import type { AiCommunityApi } from '@openx/api-openx';
+// import type { Fetch } from '@app/api';
+// import type { AiCommunityApi } from '@openx/api-openx';
 import type { InjectionKey } from 'vue';
 import type {
   ChatFlowInfo,
@@ -7,7 +7,7 @@ import type {
   ChatFlowOptionsPresetSet,
 } from '../chat-flow';
 import type { ChatAppEvents } from './types';
-import { useApi } from '@app/api';
+// import { useApi } from '@app/api';
 import { useRoute, useRouter } from 'vue-router';
 import { ChatFlow, defaultChatflowPreset } from '../chat-flow';
 import { ChatAppInput } from '../input';
@@ -70,13 +70,15 @@ export class ChatApp extends EventEmitter<ChatAppEvents> {
   chatFlowPresets = ref<ChatFlowInfo[]>(defaultChatflowPreset());
 
   /** ai 接口请求对象 */
-  aiReq: Fetch<AiCommunityApi>;
+  // aiReq: Fetch<AiCommunityApi>;
 
   constructor() {
     super();
 
+    /*
     const { ai } = useApi();
     this.aiReq = ai;
+    */
 
     this.router = useRouter();
     this.route = useRoute();

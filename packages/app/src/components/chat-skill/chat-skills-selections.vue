@@ -68,7 +68,7 @@ function clickSkillHandler(key: string) {
             :class="[skill.iconClass]" />
           <span
             font="bold"
-            m="r-4px"
+            m="r-8px"
             flex="shrink-0">
             {{ skill.name }}
           </span>

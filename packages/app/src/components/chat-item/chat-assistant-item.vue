@@ -129,7 +129,6 @@ function stopHandler() {
             <ul class="help-list">
               <li v-if="chat.type === 'chat-flow'">
                 <img m="t--4px r-4px" src="@app/assets/w3next.png"><a
-                  v-track
                   class="link"
                   target="_blank"
                   data-uem-name="AI问答助手-W3搜索"
@@ -137,7 +136,6 @@ function stopHandler() {
               </li>
               <li>
                 向 OpenX 反馈问题：<a
-                  v-track
                   class="link"
                   target="_blank"
                   data-uem-name="AI问答助手-反馈问题"

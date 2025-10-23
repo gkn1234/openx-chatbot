@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { ChatApp } from '../../../modules'
+import { ChatApp } from '../../../modules';
 
-const app = ChatApp.use()
+const app = ChatApp.use();
 
 const operationProps = {
   isSwitch: true,
   label: '深度思考',
   iconClass: 'i-mdi-think-outline',
   tip: '使用推理模型，输出深度思考过程',
-}
+};
 
 const {
   isChat,
-} = app
+} = app;
 
 const {
   params,
-} = app.input
+} = app.input;
 </script>
 
 <template>

@@ -14,7 +14,7 @@ import type {
   ChatFlowNode,
   WorkflowOptions,
 } from './types';
-import { isObjectLike } from '@openx/utils';
+import { isObjectLike } from '@chatbot/utils';
 import { mlopsReq } from '../request';
 import { streamAction } from '../stream';
 

@@ -1,8 +1,9 @@
+<!--
 <script setup lang="ts">
 import type { ChatSkillsOperationButtonProps } from '../types';
 import defaultImg from '@app/assets/openx.png';
 import { ChatApp } from '@app/modules';
-import { template } from '@openx/utils';
+import { template } from '@chatbot/utils';
 import { setupProjectSelect } from '../composables';
 
 const props = withDefaults(defineProps<{
@@ -73,4 +74,9 @@ const tipText = computed(() => {
       </chat-skills-operation-menu-item>
     </template>
   </chat-input-menu-item>
+</template>
+-->
+
+<template>
+  <div />
 </template>

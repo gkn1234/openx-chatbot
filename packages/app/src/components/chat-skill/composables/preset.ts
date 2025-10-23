@@ -1,9 +1,10 @@
 import type { ChatApp } from '../../../modules';
 import {
-  askOpenxNewSkill,
   askOpenxSkill,
   askProjectSkill,
+  deepSearchSkill,
   issueReportSkill,
+  setDeepSearchSkill,
   setOpenxSkill,
   webDescriptionSkill,
   welinkDescriptionSkill,
@@ -11,12 +12,15 @@ import {
 
 export function useChatSkillsPreset(app: ChatApp) {
   app.input
-    .addSkill(askOpenxSkill(app))
+    .addSkill(deepSearchSkill(app));
+
+  /*
+  app.addSkill(askOpenxSkill(app))
     .addSkill(askProjectSkill(app))
-    .addSkill(askOpenxNewSkill(app))
     .addSkill(issueReportSkill(app))
     .addSkill(webDescriptionSkill(app))
     .addSkill(welinkDescriptionSkill(app));
+  */
 
-  setOpenxSkill(app);
+  setDeepSearchSkill(app);
 }

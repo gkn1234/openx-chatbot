@@ -1,3 +1,4 @@
+/**
 import type {
   AiCommunityApi,
   EspaceApi,
@@ -10,8 +11,10 @@ import {
   resultConfig,
 } from '@openx/api-openx';
 import { createPreset } from '@openx/fetch/preset';
+ */
 
 /** 所有不进行消息提示的状态码 */
+/**
 const NO_ALERT_CODES = [
   '401',
   'ERR_CANCELED',
@@ -85,3 +88,4 @@ export function clearToken() {
 }
 
 export type { Fetch } from '@openx/fetch';
+ */

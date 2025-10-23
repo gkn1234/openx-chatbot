@@ -1,9 +1,9 @@
 // @unocss-include
 import type { ChatApp, InputSkillOptions } from '@app/modules';
 
-const key = 'ask-openx-new';
+const key = 'deep-search';
 
-export function setOpenxNewSkill(app: ChatApp) {
+export function setDeepSearchSkill(app: ChatApp) {
   app.input.activeKey.value = key;
 }
 
@@ -11,21 +11,21 @@ function getParams() {
   return { name: 'chat' };
 }
 
-export function askOpenxNewSkill(app: ChatApp): InputSkillOptions {
+export function deepSearchSkill(app: ChatApp): InputSkillOptions {
   return {
     key,
-    name: '向 OpenX 提问(New)',
-    description: 'Agent 版：询问关于内源机制、OpenX 平台使用等信息',
+    name: '搜索提问',
+    description: '根据网络搜索结果回答问题',
     iconClass: 'i-mdi-tooltip-question-outline',
     iconColor: '#c7000b',
     createTrigger: () => {
-      setOpenxNewSkill(app);
+      setDeepSearchSkill(app);
     },
     chattingTrigger: () => {
       ElMessageBox.confirm(`切换该技能需要返回首页并创建新对话`, '提示', {
         type: 'warning',
       }).then(() => {
-        setOpenxNewSkill(app);
+        setDeepSearchSkill(app);
         app.toHome();
       });
     },

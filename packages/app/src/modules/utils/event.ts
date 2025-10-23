@@ -1,5 +1,5 @@
-import type { Func } from '@openx/utils'
-import { toPromise } from '@openx/utils'
+import type { Func } from '@chatbot/utils'
+import { toPromise } from '@chatbot/utils'
 
 export class EventEmitter<EventsMap extends Record<string, Func> = Record<string, Func>> {
   private _eventsMap = new Map<keyof EventsMap, Func[]>()

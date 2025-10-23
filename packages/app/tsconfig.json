@@ -4,23 +4,14 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["src/*"],
-      "@openx/utils": ["../../libs/utils/src/index.ts"],
-      "@openx/utils/*": ["../../libs/utils/src/*"],
-      "@openx/track": ["../../libs/track/src/index.ts"],
-      "@openx/fetch": ["../../libs/fetch/src/index.ts"],
-      "@openx/fetch/*": ["../../libs/fetch/src/*"],
-      "@openx/fetch/plugin-*": ["../../libs/fetch/src/plugins/*"],
-      "@openx/api-openx": ["../../api/api-openx/src/index.ts"],
-      "@openx/api-openx/*": ["../../api/api-openx/src/*"]
+      "@chatbot/utils": ["../utils/src/index.ts"],
+      "@chatbot/utils/*": ["../utils/src/*"]
     }
   },
   "include": [
     "src",
     "*.config.ts",
     "../../build",
-    "../../libs/utils/src",
-    "../../libs/track/src",
-    "../../libs/fetch/src",
-    "../../api/api-openx/src"
+    "../utils/src"
   ]
 }

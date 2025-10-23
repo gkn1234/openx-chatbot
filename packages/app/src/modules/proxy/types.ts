@@ -1,4 +1,4 @@
-import type { Func } from '@openx/utils';
+import type { Func } from '@chatbot/utils';
 import type {
   ChatAppAction,
   ChatAppActionKey,

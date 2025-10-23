@@ -89,7 +89,6 @@ onBeforeUnmount(() => {
           <div bg="light" w="1px" h="20px" />
           <el-tooltip v-if="editState !== 'stop'" effect="dark" placement="top">
             <el-button
-              v-track
               type="primary"
               data-uem-name="AI问答助手-提问"
               circle

@@ -64,7 +64,6 @@ function questionClickHandler(query: string) {
       <div
         v-for="(question, index) in suggestedQuestions"
         :key="index"
-        v-track
         bg="page hover:[rgba(0,0,0,0.06)]"
         p="x-16px y-8px"
         rounded="12px"

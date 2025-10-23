@@ -24,9 +24,7 @@
   "include": [
     "src",
     "*.config.ts",
-    "../db-ai/src",
-    "../../libs/utils/src",
-    "../../libs/fetch/src",
-    "../../api/api-dify/src"
+    "../db/src",
+    "../utils/src"
   ]
 }
